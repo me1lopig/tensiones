@@ -52,16 +52,15 @@ def main():
         st.write(f"σ_y = {T[1]:.2f}")
         st.write(f"σ_z = {T[2]:.2f}")
   
+    st.subheader('Componentes intrínsecas de la tensión:')
     if (st.button("Calcular componentes intrinsecas")):
 
         # Calcular la tensión en la dirección del plano
         T = np.dot(matrix_input, n)
         # Mostrar los resultados
-        st.subheader("Componentes de la tensión en la dirección del plano")
+        st.subheader("Valores de las componentes intrínsecas de la tensión")
         st.write(f"σ_n = {T[0]:.2f}")
         st.write(f"τ_n = {T[1]:.2f}")
-
-
 
 
 main()
